@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  line-height: 6rem;
+  background-color: #d16aeb;
+}
+
+.header {
+  height: 95vh;
+  width: 100%;
+  background: linear-gradient(75deg, #783bbe85 50%, transparent),
+    url("../images/festival-pic.jpg") bottom/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+
+.header__text-box {
+  position: absolute;
+  background-color: rgba(36, 38, 39, 0.87);
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -38%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  backface-visibility: hidden;
+  animation: colorized 1.2s ease-out;
+}
+
+.header__heading {
+  color: #ecdef5;
+  font-weight: 300;
+}
+
+.heading--primary {
+  display: block;
+  letter-spacing: 1.2rem;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  animation: moveInRight 1.4s ease-out;
+}
+
+.heading--sub {
+  display: block;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  animation: moveInLeft 1.4s ease-out;
+  margin-bottom: 2rem;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorized {
+  0% {
+    background-color: rgba(36, 38, 39, 0);
+  }
+
+  50% {
+    border: 2px solid #f0f0f0;
+  }
+
+  100% {
+    background-color: rgba(36, 38, 39, 0.87);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  color: #525252;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem #d16aeb4b;
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem #d16aeb4b;
+}
+
+.btn--white {
+  background-color: #fff;
+  padding: 0 3rem;
+  border-radius: 10rem;
+}
+
+.btn--animated {
+  animation: moveInBottom 1s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
