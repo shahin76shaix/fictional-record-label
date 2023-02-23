@@ -122,6 +122,8 @@ body {
   text-transform: uppercase;
   display: block;
   font-size: 1.7rem;
+  transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -138,6 +140,34 @@ body {
   background-color: #fff;
   padding: 0 3rem;
   border-radius: 10rem;
+  /* transition: all 0.2s; */
+}
+
+.btn--white:active {
+  background-color: #d8d8d8;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10rem;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn--white:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
 .btn--animated {
