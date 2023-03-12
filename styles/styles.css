@@ -50,6 +50,11 @@ body {
   box-sizing: border-box;
 }
 
+.u-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -123,15 +128,15 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  background-color: #bface2;
+  background-color: #8f82a5;
   padding: 2rem;
 }
 
 .header__text-box {
   position: absolute;
-  top: 45%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   text-align: center;
 }
 
@@ -153,6 +158,12 @@ body {
   font-size: 3rem;
   animation: moveInRight 1.5s ease-out;
   margin-bottom: 3rem;
+}
+
+.about-us {
+  margin-top: -20rem;
+  height: 95vh;
+  background-image: linear-gradient(200deg, rgba(70, 65, 116, 0.768627451) 40%, rgb(82, 42, 95));
 }
 
 /*# sourceMappingURL=styles.css.map */
