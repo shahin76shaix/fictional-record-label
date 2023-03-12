@@ -1,7 +1,8 @@
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  background-color: #bface2;
+  font-family: $font-family-a;
+  font-weight: $font-weight-normal;
+  background-color: $color-primary;
+  padding: 2rem;
 }
 
 .header__text-box {
@@ -12,24 +13,23 @@ body {
   text-align: center;
 }
 
-.header__heading {
-  font-weight: 400;
+.heading {
+  font-weight: $font-weight-normal;
   text-align: center;
-  color: #f1f1f1;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
-}
+  &--primary {
+    display: block;
+    font-size: $font-size-big;
+    animation: moveInLeft 1.5s ease-out;
+    margin-bottom: 1.5rem;
+  }
 
-.heading--primary {
-  display: block;
-  font-size: 5rem;
-  animation: moveInLeft 1.5s ease-out;
-  margin-bottom: 1.5rem;
-}
-
-.heading--sub {
-  display: block;
-  font-size: 3rem;
-  animation: moveInRight 1.5s ease-out;
-  margin-bottom: 3rem;
+  &--sub {
+    display: block;
+    font-size: 3rem;
+    animation: moveInRight 1.5s ease-out;
+    margin-bottom: 3rem;
+  }
 }
